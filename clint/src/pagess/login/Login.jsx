@@ -5,7 +5,7 @@ import { NavLink } from 'react-router';
 
 const Login = () => {
   return (
-    <div className="grid lg:grid-cols-1 w-7/12 mx-auto">
+    <div className="grid lg:grid-cols-1 w-7/12 mx-auto pt-40">
       <div className="card bg-base-100 w-full  shrink-0 shadow-2xl my-5">
         <form className="card-body">
           <div className="flex justify-center text-2xl font-bold">

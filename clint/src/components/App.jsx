@@ -3,8 +3,13 @@ import { AuthContext } from '../layouts/MainLayout';
 
 function App() {
   const contextValue = useContext(AuthContext);
-  const { handaleGoogleLogin, handaleTwoitter, handleGithubLogin, logOut } =
-    contextValue;
+  const {
+    handaleGoogleLogin,
+    handaleTwoitter,
+    handleGithubLogin,
+    user,
+    logOut,
+  } = contextValue;
   return (
     <>
       <div className="text-center py-42 ">
@@ -17,6 +22,7 @@ function App() {
         <button className="btn btn-success">Success</button>
         <button className="btn btn-warning">Warning</button>
         <button className="btn btn-error">Error</button>
+        <button className="btn btn-error">{user?.displayName}</button>
       </div>
 
       <div className="text-center items-center">

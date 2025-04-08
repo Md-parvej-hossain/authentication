@@ -18,31 +18,31 @@ const MainLayout = () => {
   const googleAuthProvider = new GoogleAuthProvider();
   const githubAuthProvider = new GithubAuthProvider();
   const twitterAuthProvider = new TwitterAuthProvider();
-  // google login 
+  // google login
   const handaleGoogleLogin = () => {
     signInWithPopup(auth, googleAuthProvider).then(resuld =>
       setUser(resuld.user)
     );
   };
-// github ligin 
+  // github ligin
   const handleGithubLogin = () => {
     signInWithPopup(auth, githubAuthProvider).then(resuld =>
       setUser(resuld.user)
     );
   };
-  // towitter login 
+  // towitter login
   const handaleTwoitter = () => {
     signInWithPopup(auth, twitterAuthProvider).then(resuld =>
       setUser(resuld.user)
     );
   };
-  // password login 
+  // password login
   const handaleSignin = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password).then(resuld =>
       console.log(resuld.user)
     );
   };
-  // logout hear 
+  // logout hear
   const logOut = () => {
     signOut(auth).then(res => console.log(res));
   };
@@ -50,7 +50,7 @@ const MainLayout = () => {
   useEffect(() => {
     console.log('user State------>', user);
   }, [user]);
-// ovser vare hear 
+  // ovser vare hear ,set interbal
   useEffect(() => {
     const unSubscrip = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);

@@ -13,14 +13,17 @@ const Router = () => {
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+
+        <Route path="/register" element={<Register />}></Route>
       </Route>
 
-      <Route>
+      {/* <Route>
         <Route path="/login" element={<Login />}></Route>
       </Route>
       <Route>
         <Route path="/register" element={<Register />}></Route>
-      </Route>
+      </Route> */}
     </Routes>
   );
 };

@@ -4,18 +4,18 @@ import { FcGoogle } from 'react-icons/fc';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../../layouts/MainLayout';
 const Register = () => {
-  // const { handaleSignin } = useContext(AuthContext);
+  const { handaleSignin } = useContext(AuthContext);
   const handaleSubmite = e => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const name = form.name.value;
     const password = form.password.value;
-    console.log(email, password);
+    console.log(email, password, name);
     handaleSignin(email, password);
   };
   return (
-    <div className="grid lg:grid-cols-1 w-7/12 mx-auto">
+    <div className="grid lg:grid-cols-1 w-7/12 mx-auto pt-40">
       <div className="card bg-base-100 w-full  shrink-0 shadow-2xl my-5">
         <form onSubmit={handaleSubmite} className="card-body">
           <div className="flex justify-center text-2xl font-bold">
