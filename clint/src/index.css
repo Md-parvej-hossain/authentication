@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+li:hover {
+}
+.active {
+  text-decoration: 2px aqua underline;
+  border-radius: 0;
+}
+li {
+  font: 20px;
+  font-weight: 500;
+}
